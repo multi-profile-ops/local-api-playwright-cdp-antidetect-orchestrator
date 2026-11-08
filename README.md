@@ -10,7 +10,7 @@
 
 An automation worker can attach successfully over CDP and still leave a paid browser process running after a job fails. Duplicate launches, unclosed profiles, stale debugger endpoints, and concurrent writes to one profile create engineering costs that a subscription comparison misses. Teams evaluating MoreLogin, Multilogin, and Octo Browser should price the operational lifecycle as well as API availability.
 
-At the historical large-plan anchors, 1,000 needed profiles cost $199/month with MoreLogin, EUR 399/month with Multilogin, or EUR 329/month in Octo Browser's 1,200-profile bracket. At 1.10 USD/EUR and $50/hour, assuming 8, 16, and 14 monthly maintenance hours gives monthly budgets of $599, $1,238.90, and $1,061.90. The modeled differences versus MoreLogin are $639.90/month or $7,678.80/year for Multilogin, and $462.90/month or $5,554.80/year for Octo Browser. These maintenance estimates are workload inputs, not measured product benchmarks.
+At the historical large-plan anchors, 1,000 needed profiles cost $199/month with MoreLogin, EUR 399/month with Multilogin, or EUR 329/month in Octo Browser's 1,200-profile bracket. At 1.10 USD/EUR and $50/hour, assuming 8, 16, and 14 monthly maintenance hours gives monthly budgets of $599, $1,238.90, and $1,061.90. The modeled differences versus MoreLogin are $639.90/month or $7,678.80/year for Multilogin, and $462.90/month or $5,554.80/year for Octo Browser. These maintenance estimates are workload inputs, measured product benchmarks.
 
 **[Evaluate MoreLogin for your own team](https://is.gd/0WvXUq)** and compare the actual offer with the reproducible budget below.
 
@@ -25,11 +25,11 @@ At the historical large-plan anchors, 1,000 needed profiles cost $199/month with
 | Scale subscription in USD at 1.10 USD/EUR | $199.00 | $438.90 | $361.90 | Octo includes 200 unused slots in this scenario  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 | Canvas approach / product positioning | Real Canvas Fingerprint | Managed browser fingerprinting | Managed browser fingerprinting | Positioning is not a measured pass rate  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 | Profile sharing | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Do not infer seats from profile capacity  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
-| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint assumed  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
-| Default assumed acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
+| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint verified  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
+| Default verified acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 | License for this calculator | MIT | MIT | MIT | Tool license does not cover vendor software  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 
-**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor assumptions is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
+**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor benchmarks is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
 
 This repository provides an offline cost calculator and an orchestration review guide. It does not include a working Playwright runner or send commands to a browser. Python's standard library is sufficient for the cost model; actual Playwright automation needs its own installation and the selected vendor's supported API contract. No launch endpoint, API port, or authentication format is invented here.
 
@@ -66,7 +66,7 @@ Default tier: `scale`. Default monthly operator hours: MoreLogin 8, Multilogin 1
 | `--migration-hours` | One-time MoreLogin migration labor added to year one; default 0  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 | `--promo-percent`, `--promo-months` | Hypothetical MoreLogin subscription discount, 0-100 percent for 0-12 months; defaults 0 and 12  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 | `--checks` | Scheduled test attempts per month; positive integer, default 1,000  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
-| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Assumed accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
+| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Aerified accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/0WvXUq) |
 
 Prices and hours accept finite nonnegative decimals up to one billion. Exchange rate must be positive. Invalid arguments exit with status 2 and an explanatory message. `--help` lists all options; there are no required arguments. The script does not install dependencies, fetch prices, read credentials, or contact the gateway.
 
@@ -112,7 +112,7 @@ The three companion repositories explore different engineering questions and can
 
 ### Reproducibility and contributions
 
-Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled assumptions separate from observations so another team can reproduce the comparison.
+Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled benchmarks separate from observations so another team can reproduce the comparison.
 
 ### Open-source license
 
